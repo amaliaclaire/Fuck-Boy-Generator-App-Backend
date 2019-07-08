@@ -6,7 +6,11 @@ const bodyParser = require("body-parser");
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
+app.disable("x-powered-by")
 
+
+const responsesRoutes = require('./api/routes/responseRoutes')
+app.use('/responses', responsesRoutes)
 
 app.get("/ping", (req, res, next) => {
   res.json({message: "pong"})
