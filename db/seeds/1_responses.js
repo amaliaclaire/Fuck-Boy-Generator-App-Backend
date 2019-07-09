@@ -1,3 +1,4 @@
+const uuidv4 = require('uuid/v4')
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
@@ -6,43 +7,43 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('responses').insert([
         {
-          id: 1,
+          id: uuidv4(),
           quote: 'Weebee',
           category: 'Cat',
           rank: 'fat'
         },
         {
-          id: 2,
+          id: uuidv4(),
           quote: 'Deebee',
           category: 'cat',
           rank: 'killer'
         },
         {
-          id: 3,
+          id: uuidv4(),
           quote: 'Sam',
           category: 'boyfrand',
           rank: 'best'
         },
         {
-          id: 4,
+          id: uuidv4(),
           quote: 'Amalia',
           category: 'girlfriend',
           rank: 'best'
         },
         {
-          id: 5,
+          id: uuidv4(),
           quote: 'Winston',
           category: 'stuffed animal',
           rank: 'animal'
         },
         {
-          id: 6,
+          id: uuidv4(),
           quote: 'Dug',
           category: 'stuffed animal',
           rank: 'animal'
         },
         {
-          id: 7,
+          id: uuidv4(),
           quote: 'Ted',
           category: 'stuffed animal',
           rank: 'animal'

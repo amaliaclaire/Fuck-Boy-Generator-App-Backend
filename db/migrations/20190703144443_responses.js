@@ -1,7 +1,11 @@
 
+
+
 exports.up = function(knex, Promise) {
   return knex.schema.createTable("responses", table => {
-    table.increments();
+    table
+      .uuid("id")
+      .primary()
     table
       .string("quote")
       .notNullable()
